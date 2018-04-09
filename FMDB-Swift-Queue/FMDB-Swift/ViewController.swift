@@ -18,8 +18,6 @@ class ViewController: UIViewController {
         // 创建数据库文件
 
         LZSqlite.createSqliteFileWithName("mySql")
-
-        
         // 建表
 //        LZSqlite.createTable("table1")
 //
