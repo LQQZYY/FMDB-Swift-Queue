@@ -24,6 +24,8 @@
 		911D6E321DE58BD000E25326 /* FMDatabaseVariadic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911D6E301DE58BD000E25326 /* FMDatabaseVariadic.swift */; };
 		911D6E351DE58BFF00E25326 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 911D6E341DE58BFF00E25326 /* libsqlite3.tbd */; };
 		911D6E381DE5920E00E25326 /* LZSqlite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911D6E371DE5920E00E25326 /* LZSqlite.swift */; };
+		D29622C0207B405F00C8D06F /* LQSqlite.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29622BF207B405F00C8D06F /* LQSqlite.swift */; };
+		D29622C2207B40AE00C8D06F /* LQSqliteItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29622C1207B40AE00C8D06F /* LQSqliteItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,8 @@
 		911D6E341DE58BFF00E25326 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		911D6E361DE58C5700E25326 /* FMDB-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FMDB-Header.h"; sourceTree = "<group>"; };
 		911D6E371DE5920E00E25326 /* LZSqlite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LZSqlite.swift; sourceTree = "<group>"; };
+		D29622BF207B405F00C8D06F /* LQSqlite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LQSqlite.swift; sourceTree = "<group>"; };
+		D29622C1207B40AE00C8D06F /* LQSqliteItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LQSqliteItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +112,7 @@
 		911D6DF91DE58B9E00E25326 /* FMDB-Swift */ = {
 			isa = PBXGroup;
 			children = (
+				D29622BE207B401A00C8D06F /* LQSqlite */,
 				911D6E1A1DE58BB700E25326 /* FMDB */,
 				911D6DFA1DE58B9E00E25326 /* AppDelegate.swift */,
 				911D6DFC1DE58B9E00E25326 /* ViewController.swift */,
@@ -174,6 +179,15 @@
 				911D6E341DE58BFF00E25326 /* libsqlite3.tbd */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D29622BE207B401A00C8D06F /* LQSqlite */ = {
+			isa = PBXGroup;
+			children = (
+				D29622BF207B405F00C8D06F /* LQSqlite.swift */,
+				D29622C1207B40AE00C8D06F /* LQSqliteItem.swift */,
+			);
+			path = LQSqlite;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -283,7 +297,9 @@
 				911D6E281DE58BBE00E25326 /* FMDatabase.m in Sources */,
 				911D6DFD1DE58B9E00E25326 /* ViewController.swift in Sources */,
 				911D6E311DE58BD000E25326 /* FMDatabaseAdditionsVariadic.swift in Sources */,
+				D29622C2207B40AE00C8D06F /* LQSqliteItem.swift in Sources */,
 				911D6E2C1DE58BBE00E25326 /* FMResultSet.m in Sources */,
+				D29622C0207B405F00C8D06F /* LQSqlite.swift in Sources */,
 				910D96881DE67F3A00BDED83 /* LZDataModel.swift in Sources */,
 				911D6E2A1DE58BBE00E25326 /* FMDatabasePool.m in Sources */,
 				911D6DFB1DE58B9E00E25326 /* AppDelegate.swift in Sources */,
@@ -434,7 +450,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.artup.FMDB-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "FMDB-Swift/FMDB-Header.h";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -447,7 +463,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.artup.FMDB-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "FMDB-Swift/FMDB-Header.h";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};

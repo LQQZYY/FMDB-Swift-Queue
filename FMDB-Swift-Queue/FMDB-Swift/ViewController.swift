@@ -15,9 +15,31 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        let path = LQSqlite.createSqlite("test1")
+        print(path)
+ 
+        LQSqlite.createTable("man", withKeys: ["age", "sex", "height"])
+        LQSqlite.insert(["age": 20, "sex": "nan", "height": 176], byID: "1001", toTable: "man")
+        
+        let rs = LQSqlite.query("man")
+
+        print(rs)
+        
+        LQSqlite.insert(["age": 60, "sex": "nv", "height": 106], byID: "1101", toTable: "man")
+        
+        let rs1 = LQSqlite.query("man")
+        
+        print(rs1)
+        
+        LQSqlite.delete(byID: "100", fromTable: "man")
+        print(LQSqlite.query("man"))
+
+        LQSqlite.update(["age": 20, "sex": "nan"], byID: "110", toTable: "man")
+        
         // 创建数据库文件
 
         LZSqlite.createSqliteFileWithName("mySql")
+        
         // 建表
 //        LZSqlite.createTable("table1")
 //
